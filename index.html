@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- chart js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- swiper style sheet link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Assesment Task 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Click to view the Task 01</h2>
+
+          <!-- Button to trigger the modal -->
+          <button id="showModal">Click Here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- The overlay -->
+    <div id="overlay" class="overlay show">
+      <div id="modal" class="modal show">
+        <!-- modal content implementing -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="container-swiper-ele">
+                <div class="chart-container earning-count-container">
+                  <div class="coins">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2c0 0 0 0 0 0s0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4l0 3.4 0 5.7 0 26.3zm32 0l0-32 0-25.9c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 44.2-86 80-192 80S0 476.2 0 432l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                    <p><span>+1.5%</span>Higher Earning than usual.</p>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                  </div>
+
+                  <canvas id="myChart01" width="200" height="50"></canvas>
+                </div>
+              </div>
+              <div class="swiper-slide-content">
+                <h4>Get started</h4>
+                <p>
+                  Get started right way and track your revenue.On a clear
+                  dashboard you can monitor all yours progress live and watch
+                  your success grow.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container-swiper-ele">
+                <div class="chart-container earning-count-container">
+                  <div class="coins">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2c0 0 0 0 0 0s0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4l0 3.4 0 5.7 0 26.3zm32 0l0-32 0-25.9c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 44.2-86 80-192 80S0 476.2 0 432l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                    <p><span>+1.5%</span>Higher Earning than usual.</p>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                  </div>
+
+                  <canvas id="myChart02" width="200" height="50"></canvas>
+                </div>
+              </div>
+              <div class="swiper-slide-content">
+                <h4>Get started</h4>
+                <p>
+                  Get started right way and track your revenue.On a clear
+                  dashboard you can monitor all yours progress live and watch
+                  your success grow.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container-swiper-ele">
+                <div class="chart-container earning-count-container">
+                  <div class="coins">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path
+                        d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2c0 0 0 0 0 0s0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4l0 3.4 0 5.7 0 26.3zm32 0l0-32 0-25.9c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5l0 35.4c0 44.2-86 80-192 80S0 476.2 0 432l0-35.4c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                    <p><span>+1.5%</span>Higher Earning than usual.</p>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <div class="chart-content">
+                    <span>Total Earnings</span>
+                    <p><span>$</span>812,168.21</p>
+                  </div>
+
+                  <canvas id="myChart03" width="200" height="50"></canvas>
+                </div>
+              </div>
+              <div class="swiper-slide-content">
+                <h4>Get started</h4>
+                <p>
+                  Get started right way and track your revenue.On a clear
+                  dashboard you can monitor all yours progress live and watch
+                  your success grow.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="flex align-center navig-btn">
+          <div
+            class="swiper-button-prev swip-nav-btn swiper-button-disabled"
+            tabindex="-1"
+            role="button"
+            aria-label="Next slide"
+            aria-controls="swiper-wrapper-6c1b10e1874fc4fc8"
+            aria-disabled="true"
+          >
+            Continue
+          </div>
+          <div
+            class="swiper-button-next swip-nav-btn"
+            tabindex="0"
+            role="button"
+            aria-label="Previous slide"
+            aria-controls="swiper-wrapper-6c1b10e1874fc4fc8"
+            aria-disabled="false"
+          >
+            Back
+          </div>
+        </div>
+        <span class="close-btn" id="closeModal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <!-- swiper js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- custom js for modal implementation -->
+    <script>
+      // Get the overlay and modal elements
+      var overlay = document.getElementById("overlay");
+      var modal = document.getElementById("modal");
+      var showModalBtn = document.getElementById("showModal");
+      var closeModalBtn = document.getElementById("closeModal");
+
+      // Function to show the modal and overlay
+      showModalBtn.onclick = function () {
+        overlay.classList.add("show");
+        modal.classList.add("show");
+      };
+
+      // Function to close the modal and overlay
+      closeModalBtn.onclick = function () {
+        overlay.classList.remove("show");
+        modal.classList.remove("show");
+      };
+
+      // Close the modal when the user clicks outside of it
+      window.onclick = function (event) {
+        if (event.target === overlay) {
+          overlay.classList.remove("show");
+          modal.classList.remove("show");
+        }
+      };
+
+      // swiper js
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-prev",
+          prevEl: ".swiper-button-next",
+        },
+      });
+
+      // custom chart js
+      const ctx = document.getElementById("myChart01").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // X-axis labels
+          datasets: [
+            {
+              label: "", // No label
+              data: [65, 59, 280, 581, 560, 555, 40], // Y-axis data points
+              borderColor: "#DACCFB", // Line color
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Fill color (optional)
+              borderWidth: 2,
+              fill: false, // No fill under the line
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          elements: {
+            point: {
+              radius: 0, // No points on the line
+            },
+          },
+          scales: {
+            x: {
+              display: false, // Hide X-axis
+            },
+            y: {
+              display: false, // Hide Y-axis
+            },
+          },
+          plugins: {
+            legend: {
+              display: false, // Hide legend
+            },
+            tooltip: {
+              enabled: false, // Disable tooltips
+            },
+          },
+        },
+      });
+
+      const ctx2 = document.getElementById("myChart02").getContext("2d");
+      const myChart2 = new Chart(ctx2, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // X-axis labels
+          datasets: [
+            {
+              label: "", // No label
+              data: [65, 59, 280, 581, 560, 555, 40], // Y-axis data points
+              borderColor: "#DACCFB", // Line color
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Fill color (optional)
+              borderWidth: 2,
+              fill: false, // No fill under the line
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          elements: {
+            point: {
+              radius: 0, // No points on the line
+            },
+          },
+          scales: {
+            x: {
+              display: false, // Hide X-axis
+            },
+            y: {
+              display: false, // Hide Y-axis
+            },
+          },
+          plugins: {
+            legend: {
+              display: false, // Hide legend
+            },
+            tooltip: {
+              enabled: false, // Disable tooltips
+            },
+          },
+        },
+      });
+
+      const ctx3 = document.getElementById("myChart03").getContext("2d");
+      const myChart3 = new Chart(ctx3, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // X-axis labels
+          datasets: [
+            {
+              label: "", // No label
+              data: [65, 59, 280, 581, 560, 555, 40], // Y-axis data points
+              borderColor: "#DACCFB", // Line color
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Fill color (optional)
+              borderWidth: 2,
+              fill: false, // No fill under the line
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          elements: {
+            point: {
+              radius: 0, // No points on the line
+            },
+          },
+          scales: {
+            x: {
+              display: false, // Hide X-axis
+            },
+            y: {
+              display: false, // Hide Y-axis
+            },
+          },
+          plugins: {
+            legend: {
+              display: false, // Hide legend
+            },
+            tooltip: {
+              enabled: false, // Disable tooltips
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

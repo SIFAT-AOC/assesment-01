@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(223, 224, 224, 0.869);
+}
+/* utility class */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+/* Styles for the full page overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Styles for the modal */
+.modal {
+  background-color: #fff;
+  padding: 50px 20px 100px 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 2;
+  transform: translateY(-50px);
+  opacity: 0;
+  max-width: 450px;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 1) 13%,
+    rgba(248, 245, 254, 1) 35%,
+    rgba(233, 233, 253, 1) 83%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.close-btn svg {
+  fill: rgb(131, 126, 126);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 20px;
+  right: 20px;
+  background-color: #f2f2fd;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.close-btn:hover {
+  background-color: #45a049;
+}
+
+/* styles for the modal open button */
+#showModal {
+  background: rgb(67, 139, 204);
+  background: linear-gradient(
+    90deg,
+    rgba(37, 63, 203, 0.8689600840336135) 76%,
+    rgba(67, 139, 204, 0.8689600840336135) 72%
+  );
+  background-size: 200% 200%;
+  border: none;
+  font-weight: 700;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  animation: gradient-animation 3s ease infinite;
+  transition: all 0.2s ease;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#showModal:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  animation: none; /* Stop the animation on hover */
+}
+
+/* container for the task 1 page content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.container .row .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .row .col h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+/* swiper custom css */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* slide button for swiper */
+
+.slide-btn {
+}
+.slide-btn:hover {
+}
+
+/* removing prev , next navigation icon */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "" !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: 100%;
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.34;
+}
+
+.navig-btn {
+  position: absolute;
+  bottom: 10%;
+  transform: translateY(10%);
+}
+
+.navig-btn .swip-nav-btn {
+  border: 2px solid #e6e5e5;
+  padding: 2px 75px;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+}
+.navig-btn .swip-nav-btn:hover {
+  background-color: #5e55e9;
+
+  color: #fff;
+}
+
+.swiper {
+  /* padding-bottom: 60px !important; */
+}
+
+/* swiper element content css */
+.container-swiper-ele {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+.chart-container {
+  width: 210px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-right: 70px;
+}
+.chart-content {
+  padding: 15px 15px 0 15px;
+  text-align: start;
+}
+.chart-content span {
+  font-size: 12px;
+}
+.chart-content p {
+  font-size: 30px;
+  margin: 7px 0;
+  display: flex;
+  align-items: center;
+}
+.chart-content p span {
+  font-size: 18px;
+  color: #bbbaba;
+}
+.swiper-pagination,
+.swiper-wrapper {
+  margin-bottom: 0;
+}
+.earning-count-container {
+  height: 120px;
+  background-color: #5e55e9;
+  color: #fff;
+  position: absolute;
+  left: 22%;
+  bottom: 5%;
+  transform: translate(-40%, 29%);
+}
+
+.earning-count-container .chart-content p:first-child {
+  margin-top: 20px;
+}
+.earning-count-container .chart-content p:last-child {
+  font-size: 10px;
+  margin-top: 7px;
+  padding-bottom: 9px;
+}
+.earning-count-container .chart-content p:last-child span {
+  background-color: #4a37b1;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 9px;
+  margin-right: 4px;
+}
+
+.coins {
+  position: absolute;
+  background-color: #4a37b1;
+  padding: 3px 10px;
+  border-radius: 5px;
+  right: 10px;
+  top: 10px;
+}
+.coins svg {
+  fill: #fff;
+  height: 14px;
+}
+.swiper-slide-content {
+  margin: 50px 0 40px 0;
+}
+.swiper-slide-content h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.swiper-slide-content p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 350px;
+  }
+  .chart-container {
+    margin-right: 10px;
+  }
+  .earning-count-container {
+    left: 1%;
+    bottom: 0%;
+    transform: translateY(35%);
+  }
+}
